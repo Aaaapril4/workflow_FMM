@@ -89,8 +89,6 @@ EOF
     mv grid2dv.z ../output_cb/grid2dv."$per".z
     mv raypath.out ../output_cb/raypath."$per".out
     mv residuals.dat ../output_cb/residuals."$per".dat
-    cp ../sources."$per".dat ../output_tomo
-    cp ../receivers."$per".dat ../output_tomo
     rm *.dat
     rm *.out
     rm *.vtx

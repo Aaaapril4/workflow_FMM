@@ -27,20 +27,18 @@ do
 
     zsh ttomoss
 
-# for plot the raypath
     tslicess
-    
+
+# plot histogram
+    sh PLOT_hist.sh
+    mv hist.pdf ../plot/hist."$per".pdf
     cp ../receivers."$per".dat ../plot_raypath
     cp ../sources."$per".dat ../plot_raypath
     mv rays.dat ../plot_raypath/rays."$per".dat
-    mv gridc.vtx ../output_tomo/gridc."$per".vtx
-    mv itimes.dat ../output_tomo/itimes."$per".dat
     mv grid2dv.z ../output_tomo/grid2dv."$per".z
-    cp ../sources."$per".dat ../output_tomo
-    cp ../receivers."$per".dat ../output_tomo
-    #rm *.out
-    #rm *.dat
-    #rm *.vtx
+   # rm *.out
+   # rm *.dat
+   # rm *.vtx
 done
 
 python3 cal_perturbation.py

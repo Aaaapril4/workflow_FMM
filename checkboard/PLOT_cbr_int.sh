@@ -9,7 +9,7 @@ gmt gmtset MAP_TICK_LENGTH_SECONDARY 2p
 
 R=25/40/-15/4
 J=m0.2i
-PS=~/Documents/plot/tomo_cbr.ps
+PS=../plot/tomo_cbr.ps
 
 # period you should give your own
 per=( 5  7  9  13  17  21  25  29  33  37  41  45  49  53  57  61  65)
