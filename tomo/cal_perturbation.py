@@ -21,7 +21,7 @@ def cal_perturbation(path):
             np.savetxt(f'{path}/pertb.{file.split(".")[1]}.z', pertb)
             per.append(int(file.split(".")[1]))
             avg.append(avgeach)
-    np.savetxt(f'{path}/avgvel.dat', np.column_stack((per,avg)), fmt='%.4f, %.4f')
+    np.savetxt(f'{path}/avgvel.dat', np.column_stack((per,avg)), fmt='%.2f, %.2f')
     return
 
 if __name__ == '__main__':
