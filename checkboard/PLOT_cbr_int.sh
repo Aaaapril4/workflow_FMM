@@ -31,7 +31,7 @@ do
     INPUT_FILE=../output_cb/grid2dv."${per[$i]}".z
 	gmt xyz2grd $INPUT_FILE -Ginput.grd2 -I0.05/0.05 -ZLB -R25/42/-15/6
         
-    gmt makecpt -Cvik -T-0.1/0.1/0.05 -Ic -D -Z > $CPT
+    gmt makecpt -Cpanoply -T-0.1/0.1/0.05 -Ic -D -Z > $CPT
 
 	if  (( $i ==  0  )) ; then
        XOFF=1i

@@ -1,7 +1,7 @@
 #!/bin/bash --login
 #BATCH Lines for Resource Request ##########
  
-#SBATCH --time=7:00:00             # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH --time=4:00:00             # limit of wall clock time - how long the job will run (same as -t)
 #SBATCH --nodes=1                   # number of different nodes - could be an exact number or a range of nodes (same as -N)
 #SBATCH --ntasks=1                 # number of tasks - how many tasks (nodes) that you require (same as -n)
 #SBATCH --cpus-per-task=1          # number of CPUs (or cores) per task (same as -c)
@@ -24,13 +24,13 @@ cd /mnt/home/jieyaqi/code/FMST/Shell_for_FMM/checkboard
 sh do_cb.sh &
 wait
 
-#sh select.sh
-#sh caldist_seleted.sh
-#sh FMM_tomo3_m.sh
-#cd /mnt/home/jieyaqi/code/FMST/Shell_for_FMM/tomo
-#sh do_tomo.sh &
-#cd /mnt/home/jieyaqi/code/FMST/Shell_for_FMM/checkboard
-#sh do_cb.sh &
-#wait
+sh select.sh
+sh caldist_seleted.sh
+sh FMM_tomo3_m.sh
+cd /mnt/home/jieyaqi/code/FMST/Shell_for_FMM/tomo
+sh do_tomo.sh &
+cd /mnt/home/jieyaqi/code/FMST/Shell_for_FMM/checkboard
+sh do_cb.sh &
+wait
 
 scontrol show job $SLURM_JOB_ID     ### write job information to output file
